@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celebration</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="celebration">
+                <img src="celebration.jpg">
+            </div>
+
+            <a href="index.html"> 
+                <button>PLAY AGAIN</button>
+            </a>
+
+            <div class="rules-button" onclick="openPopup()"><label>RULES</label></div>
+            <div class="rules-popup" id="popup">
+                <h6>Game Rules</h6>
+                <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock</li>
+                    <li>Agree ahead of time whether you,ll count off "rock, paper, scissors, shoot" or just" rock, paper, scissors."</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+                <button class="close" onclick="closePopup()">&times;</button>
+            </div>
+        </div>
+
+    </body>
+</html>

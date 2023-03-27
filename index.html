@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="scorecard">
+            <img class="title" src="logo.svg" alt="rps">
+            <div class="computerScore">
+                <p>COMPUTER SCORE</p>
+                <h1>0</h1>
+            </div>
+            <div class="yourScore">
+                <p>YOUR<br>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="button rock">
+                <img  src="Rock.png" alt="rock-img" onclick="chooseButton('rock')">
+            </div>
+            <div class="button scissors">
+                <img src="Scissors.png" alt="scissors-img"  onclick="chooseButton('scissors')">
+            </div>
+            <div class="button paper">
+                <img src="Paper.png" alt="paper-img"  onclick="chooseButton('paper')">
+            </div>
+        </div>
+        <div class="output">
+            <div class="userChoice">
+                <h1>YOU PICKED</h1>
+                <div class="showChoice">
+                    <img id="showUserChoice" src="Rock.png" alt="user choice">
+                </div>
+            </div>
+            <div class="overallResult">
+                <div class="result">
+                    <h1>YOU WIN AGAINST PC</h1>
+                </div>
+                <div class="playAgain" onclick="playAgainGame()">
+                    <p>PLAY AGAIN</p>
+                </div>
+            </div>
+            <div class="pcChoice">
+                <h1>PC PICKED</h1>
+                <div class="showChoice">
+                    <img id="showPcChoice" src="Paper.png" alt="pc choice">
+                </div>
+            </div>
+        </div>
+        <div class="extraButtons">
+            <div class="reset-button" onclick="clearLocalStorage()"><label>RESET</label></div>
+            <a class="next" href="index1.html" ><button id="next-display">NEXT</button></a>
+            <div class="rules-button" onclick="openPopup()"><label>RULES</label></div>
+            <div class="rules-popup" id="popup">
+            <div class="popup-content">
+                <h6>Game Rules</h6>
+                <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock</li>
+                    <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just"rock, paper, scissors."</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div> 
+            <button class="close" onclick="closePopup()" alt="close">&times;</button>
+            </div>  
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
